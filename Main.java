@@ -7,10 +7,11 @@ class Main
 	 static ArrayList<Integer> playerPositions = new  ArrayList<Integer>();
 	 static ArrayList<Integer> cpuPositions = new  ArrayList<Integer>();
 
-	 System.out.println("\nWelcome to Tic-Tac-Toe Game\n");
+	
 
      public static void main(String []args)
      {
+		System.out.println("\nWelcome to Tic-Tac-Toe Game\n");
 		char[] [] demoBoard = 
         { 
             {'1', '|','2', '|','3'},
@@ -54,7 +55,7 @@ class Main
 			
 
 		Random r = new Random();
-		System.out.println("\nCPU turn");
+		System.out.println("\n1CPU turn");
         int cpuPos = r.nextInt(9)+1;
 		while ( cpuPositions.contains(cpuPos) || playerPositions.contains(cpuPos))
 			{
@@ -74,7 +75,7 @@ class Main
 
 	public static void printDemoBoard(char [][] demoBoard)
 		{
-			System.out.println("Below is the Board Placements");
+			System.out.println("Board Placements are as shown below\n");
 			for(char[] demoRow : demoBoard)
 			{
 				for( char demoColumn : demoRow)
